@@ -19,7 +19,21 @@ async function fetchAPI(query='',page=1) {
 
 //book display function
 function displayBooks(books){
-    bookStage.innerHTML=""
+    bookStage.innerHTML="";
+    books.forEach(book => {
+         const bookCard = document.createElement('div');
+        // bookCard.bookList.add("")
+
+         const bookImg = book.formats['image/jpeg'] || 'assets/fallback.jpg';
+         console.log("img",bookImg)
+        bookCard.innerHTML = `
+        <img src="${bookImg}" alt="Book Image" class="book-img" />
+
+        `;
+         bookStage.appendChild(bookCard);
+        console.log(bookCard)
+    });
+    
 
 }
 

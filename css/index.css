@@ -115,3 +115,8 @@ a:link {
     height: 100%;
     background-color: #F9F9F9;
 }
+
+.book-img{
+    width: 100px;
+    height: 100px;
+}
