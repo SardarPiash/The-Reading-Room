@@ -110,7 +110,20 @@ a:link {
     grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
     gap: 5px;
     padding: 5px;
-    margin-top: 20px;
+}
+.main-heading{
+    width: 100%;
+    height: 35px;
+}
+
+.body-heading-text{
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+    color: rgb(0, 0, 0);
 }
 
 .book-card {
@@ -124,7 +137,7 @@ a:link {
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin-top: 20px;
+    margin-bottom: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     border: 1px solid rgb(196, 194, 194);
     border-radius: 8px;
@@ -140,8 +153,7 @@ a:link {
     height: 210px;
     position: relative;
     overflow: hidden;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    
     
 }
 
@@ -160,9 +172,7 @@ a:link {
     height: auto;
     padding: 4px;
     text-align: left;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    margin-top: 10px; 
+    margin-top: 20px; 
 }
 
 .author-icon {
@@ -171,4 +181,36 @@ a:link {
     margin-right: 5px;
     vertical-align: middle;
 }
+.button-div {
+    width: 100%;
+    height: auto;
+    display: inline-flex; 
+    align-items: flex-start; 
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+.view-button{
+    margin-top: 4px;
+    height: 30px;
+    border-radius: 6px;
+    background-color: rgb(181, 200, 199);
+}
+.view-button:hover{
+    background-color: rgb(194, 218, 216);
+}
 
+.wishlist-btn {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    margin-top: 6px;
+}
+
+.wishlist-icon {
+    width: 20px;
+    height: 20px;
+    
+}
