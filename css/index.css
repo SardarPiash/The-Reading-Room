@@ -103,20 +103,72 @@ a:link {
     height: 15px;
 }
 
-
-
-
-
-
 /* body css */
 
-.body{
-    width: 100%;
-    height: 100%;
-    background-color: #F9F9F9;
+.body {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+    gap: 5px;
+    padding: 5px;
+    margin-top: 20px;
 }
 
-.book-img{
-    width: 100px;
-    height: 100px;
+.book-card {
+    width: 150px;
+    height: 330px;
+    background-color: rgb(230, 224, 224);
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border: 1px solid rgb(196, 194, 194);
+    border-radius: 8px;
 }
+
+.book-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.book-div {
+    width: 100%;
+    height: 210px;
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    
+}
+
+.book-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+.book-details {
+    width: 138px; 
+    height: auto;
+    padding: 4px;
+    text-align: left;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin-top: 10px; 
+}
+
+.author-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
