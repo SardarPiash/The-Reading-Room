@@ -14,11 +14,13 @@ async function fetchAPI(query = "", page = 1) {
     );
     const data = await response.json();
     displayBooks(data.results);
+    console.log(data.results)
   } catch (error) {
     console.log(error);
   }
 }
 
+//wishlist function
 function handleWishList(id, iconElement) {
   wislistArray = JSON.parse(localStorage.getItem("wishlistID")) || [];
   const index = wislistArray.indexOf(id);
@@ -85,7 +87,7 @@ function displayBooks(books) {
 
 fetchAPI();
 
-
+//pagination function
 function changePage(page) {
   if (page < 1) return;
   currentPage = page;
