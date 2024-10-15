@@ -69,8 +69,16 @@
         <span class="body-heading-text">Find your books</span>
         
       </div>
-      <div class="body" id="book-lists"></div>   
+      <div class="body" id="book-lists">
+        Lodding...
+      </div>   
     </main>
+
+    <div class="pagination">
+      <button onclick="changePage(currentPage - 1)">Previous</button>
+      <span id="pageIndicator">Page 1</span>
+      <button onclick="changePage(currentPage + 1)">Next</button>
+    </div>
 
     <script src="script.js"></script>
   </body>

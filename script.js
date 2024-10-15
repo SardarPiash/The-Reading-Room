@@ -1,4 +1,4 @@
-const currentPage = 1;
+let currentPage = 1;
 let wislistArray = JSON.parse(localStorage.getItem("wishlistID")) || [];
 const authorIcon = "assets/author.png";
 const wishIconBlack = "assets/black_love.png";
@@ -84,3 +84,11 @@ function displayBooks(books) {
 }
 
 fetchAPI();
+
+
+function changePage(page) {
+  if (page < 1) return;
+  currentPage = page;
+  pageIndicator.textContent = `Page ${page}`;
+  fetchAPI('', page);
+}

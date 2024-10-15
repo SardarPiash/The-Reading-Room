@@ -107,8 +107,8 @@ a:link {
 
 .body {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 5px;
     padding: 0px 110px;
 }
 .main-heading{
@@ -127,7 +127,7 @@ a:link {
 }
 
 .book-card {
-    width: 170px;
+    width: 150px;
     height: 250px;
     background-color: rgb(230, 224, 224);
     border-radius: 8px;
@@ -150,9 +150,10 @@ a:link {
 
 .book-div {
     width: 100%;
-    height: 210px;
+    height: 200px;
     position: relative;
     overflow: hidden;
+    
     
     
 }
@@ -164,7 +165,7 @@ a:link {
     position: absolute;
     top: 0;
     left: 0;
-    
+    padding: 4px 0px;
 }
 
 .book-details {
@@ -172,7 +173,7 @@ a:link {
     height: auto;
     padding: 4px;
     text-align: left;
-    margin-top: 20px; 
+    margin-top: 2px; 
 }
 
 .author-icon {
@@ -214,3 +215,17 @@ a:link {
     height: 20px;
     
 }
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  .slide-in {
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide-in.show {
+    transform: translateX(0);
+  }
