@@ -107,9 +107,9 @@ a:link {
 
 .body {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
-    gap: 5px;
-    padding: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 10px;
+    padding: 0px 110px;
 }
 .main-heading{
     width: 100%;
@@ -127,8 +127,8 @@ a:link {
 }
 
 .book-card {
-    width: 150px;
-    height: 330px;
+    width: 170px;
+    height: 250px;
     background-color: rgb(230, 224, 224);
     border-radius: 8px;
     text-align: center;
