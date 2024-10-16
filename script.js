@@ -45,7 +45,7 @@ function displayBooks(books) {
     const bookCard = document.createElement("div");
     bookCard.classList.add("book-card");
 
-    const bookImg = book.formats["image/jpeg"] || "assets/fallback.jpg";
+    const bookImg = book.formats["image/jpeg"] || "assets/fallback.png";
 
     bookCard.innerHTML = `
       <div class="book-div" >
