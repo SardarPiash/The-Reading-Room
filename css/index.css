@@ -46,11 +46,14 @@
     justify-content:start;
     /* background-color: rgb(101, 236, 77); */
 }
-a:link {
-    color: black;
+.nav-button{
+    border: none;
+    outline: none;
+    cursor: pointer;
     background-color: transparent;
-    text-decoration: none;
-  }
+    width: 50px;
+    height: 30px;
+}
 
 .navigation-element{
     display: inline-flex;

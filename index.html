@@ -23,7 +23,7 @@
           </div>
 
           <div class="navigation-container">
-            <a href="#">
+            <button onclick="fetchAPI();  flag(true)" class="nav-button">
               <div class="navigation-element">
                 <span>
                   <img
@@ -33,8 +33,8 @@
                 </span>
                 <span style="margin-left: 2px; margin-top: 4px;">Home</span>
               </div>
-            </a>
-            <a href="#">
+            </button>
+            <button onclick="showWishlist();  flag(false)" class="nav-button">
               <div class="navigation-element" style="margin-left: 20px;">
                 <span>
                   <img
@@ -44,7 +44,7 @@
                 </span>
                 <span style="margin-left: 2px; margin-top: 4px;">Wishlist</span>
               </div>
-            </a>
+            </button>
           </div>
           <div class="filter-container">
             <span style="font-size: 18px;">Filter by:</span>
@@ -54,7 +54,6 @@
               <option value="history">History</option>
             </select>
           </div>
-          <!-- id="genreFilter" onchange="filterBooksByGenre(this.value)" -->
           <div class="search-container">
             <img class="search-icon" src="assets/search_icon.png" />
             <input
@@ -74,7 +73,9 @@
     <!-- Body -->
     <main>
       <div class="main-heading" style="margin-top: 10px;">
-        <span class="body-heading-text">Find your books</span>
+     <div id="heading-text">
+
+    </div>
       </div>
       <div class="body" id="book-lists">
         <div class="loading-container">
@@ -95,3 +96,23 @@
     <script src="script.js"></script>
   </body>
 </html>
+
+<script>
+function flag(value) {
+  const heading = document.getElementById("heading-text");
+  const loading = document.getElementById("book-lists");
+  const headingText = `<span class="body-heading-text">${value ? "Find your books" : "Your wishlist"}</span>`;
+  heading.innerHTML = ""; 
+  heading.innerHTML = headingText;
+  loading.innerHTML = `
+  <div class="loading-container">
+          <span class="loading-text">Loading</span>
+          <span class="dot dot1">.</span>
+          <span class="dot dot2">.</span>
+          <span class="dot dot3">.</span>
+        </div>
+  `
+}
+
+flag(true);
+</script>

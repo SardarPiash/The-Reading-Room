@@ -1,0 +1,91 @@
+<script>
+    // pull wishlist from localstorage
+    const wishlist = JSON.parse(localStorage.getItem("wishlistID"))
+    console.log(wishlist)
+
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wishlist</title>
+    <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+     <!-- Navbar -->
+     <nav class="nav">
+        <div>
+          <div class="nav-container">
+            <div class="icon-container">
+              <div class="img-div">
+                <img
+                  class="logo-img"
+                  src="assets/logo.png"
+                  alt="The Reading Room Logo"
+                />
+              </div>
+              <div class="logo-text">reading room</div>
+            </div>
+  
+            <div class="navigation-container">
+              <a href="/index.html">
+                <div class="navigation-element">
+                  <span>
+                    <img
+                      src="assets/home.png"
+                      style="width: 20px; height: 20px;"
+                    />
+                  </span>
+                  <span style="margin-left: 2px; margin-top: 4px;">Home</span>
+                </div>
+              </a>
+              <a href="wishlist.html">
+                <div class="navigation-element" style="margin-left: 20px;">
+                  <span>
+                    <img
+                      src="assets/wishlist.png"
+                      style="width: 16px; height: 16px; margin-top: 4px;"
+                    />
+                  </span>
+                  <span style="margin-left: 2px; margin-top: 4px;">Wishlist</span>
+                </div>
+              </a>
+            </div>
+            <div class="filter-container">
+              <span style="font-size: 18px;">Filter by:</span>
+              <select class="filter-option" onchange="filterBooksByGenre(this.value)">
+                <option value="">All Genres</option>
+                <option value="fiction">Fiction</option>
+                <option value="history">History</option>
+              </select>
+            </div>
+            <div class="search-container">
+              <img class="search-icon" src="assets/search_icon.png" />
+              <input
+                type="text"
+                placeholder="Search book..."
+                value=""
+                name=""
+                class="search-input"
+                oninput="searchBooks(this.value)"
+              />
+            </div>
+  
+          </div>
+        </div>
+     </nav>
+
+     <div class="main-heading">
+        <span class="body-heading-text">Your Wishlist</span>
+        <div class="body">
+           
+        </div>
+     </div>
+
+
+
+</body>
+</html>
+
