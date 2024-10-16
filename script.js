@@ -94,3 +94,10 @@ function changePage(page) {
   pageIndicator.textContent = `Page ${page}`;
   fetchAPI('', page);
 }
+
+
+//search function
+function searchBooks(query) {
+  console.log(query)
+  fetchAPI(query, currentPage);
+}
