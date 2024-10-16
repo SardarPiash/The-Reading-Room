@@ -28,14 +28,14 @@
                 <span>
                   <img
                     src="assets/home.png"
-                    style="width: 20px; height: 20px"
+                    style="width: 20px; height: 20px;"
                   />
                 </span>
                 <span style="margin-left: 2px; margin-top: 4px;">Home</span>
               </div>
             </a>
             <a href="#">
-              <div class="navigation-element" style="margin-left: 20px">
+              <div class="navigation-element" style="margin-left: 20px;">
                 <span>
                   <img
                     src="assets/wishlist.png"
@@ -46,9 +46,17 @@
               </div>
             </a>
           </div>
-
+          <div class="filter-container">
+            <span style="font-size: 18px;">Filter by:</span>
+            <select class="filter-option" onchange="filterBooksByGenre(this.value)">
+              <option value="">All Genres</option>
+              <option value="fiction">Fiction</option>
+              <option value="history">History</option>
+            </select>
+          </div>
+          <!-- id="genreFilter" onchange="filterBooksByGenre(this.value)" -->
           <div class="search-container">
-              <img class="search-icon" src="assets/search_icon.png" />
+            <img class="search-icon" src="assets/search_icon.png" />
             <input
               type="text"
               placeholder="Search book..."
@@ -58,15 +66,15 @@
               oninput="searchBooks(this.value)"
             />
           </div>
+
         </div>
       </div>
     </nav>
 
     <!-- Body -->
-    <main >
-      <div class="main-heading">
+    <main>
+      <div class="main-heading" style="margin-top: 10px;">
         <span class="body-heading-text">Find your books</span>
-        
       </div>
       <div class="body" id="book-lists">
         <div class="loading-container">
@@ -75,7 +83,7 @@
           <span class="dot dot2">.</span>
           <span class="dot dot3">.</span>
         </div>
-      </div>  
+      </div>
     </main>
 
     <div class="pagination">
