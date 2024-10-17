@@ -1,4 +1,5 @@
 let currentPage = 1;
+let isOpenBookDetails = false;
 let wislistArray = JSON.parse(localStorage.getItem("wishlistID")) || [];
 const authorIcon = "assets/author.png";
 const wishIconBlack = "assets/black_love.png";
@@ -8,13 +9,12 @@ const bookStage = document.getElementById("book-lists");
 const paginationIndex = document.getElementById("paginationIndex");
 
 async function fetchAPI(query = "", page = 1) {
-  console.log("Home")
   try {
     const response = await fetch(
       `https://gutendex.com/books/?search=${query}&page=${page}`
     );
     const data = await response.json();
-    displayBooks(data.results,"all");
+    displayBooks(data.results, "all");
   } catch (error) {
     console.log(error);
   }
@@ -36,12 +36,11 @@ function handleWishList(id, iconElement) {
   localStorage.setItem("wishlistID", JSON.stringify(wislistArray));
 }
 
-function displayBooks(books,flag) {
+function displayBooks(books, flag) {
   bookStage.innerHTML = "";
   books.forEach((book) => {
     const isInWishlist = wislistArray.includes(book.id);
     const icon = isInWishlist ? wishIconRed : wishIconBlack;
-   // const heading = `<span class="body-heading-text">Find your books</span>`;
     const bookCard = document.createElement("div");
     bookCard.classList.add("book-card");
 
@@ -57,9 +56,11 @@ function displayBooks(books,flag) {
         </div>
         <div style="font-size: 10px; margin-top:2px;">
           <img src="${authorIcon}" class="author-icon" />
-          ${book.authors.length !== 0?
-            book.authors[0]?.name.slice(0, 16) +
-            (book.authors[0]?.name.length > 16 ? "..." : ""):"Not specified"
+          ${
+            book.authors.length !== 0
+              ? book.authors[0]?.name.slice(0, 16) +
+                (book.authors[0]?.name.length > 16 ? "..." : "")
+              : "Not specified"
           }
         </div>
         <div style="font-size: 14px;">
@@ -79,12 +80,21 @@ function displayBooks(books,flag) {
       </div>
     `;
 
+    //add enent listener to wishlist button
     const wishlistButton = bookCard.querySelector(".wishlist-btn");
     const iconElement = wishlistButton.querySelector(".wishlist-icon");
 
     wishlistButton.addEventListener("click", () => {
       handleWishList(book.id, iconElement);
     });
+
+    //add enent listener to deatils button
+    const detailsButton = bookCard.querySelector(".view-button");
+    detailsButton.addEventListener("click", () => {
+      //making dynamic url using book-id
+      window.location.href = `bookdetails.html?id=${book.id}`
+    });
+
     bookStage.appendChild(bookCard);
   });
 }
@@ -106,20 +116,17 @@ function searchBooks(query) {
 }
 
 //filter function
-function filterBooksByGenre(genre){
-  fetchAPI(genre,currentPage);
+function filterBooksByGenre(genre) {
+  fetchAPI(genre, currentPage);
 }
 
-//function to show wishlist 
-const showWishlist = async()=>{
-  console.log("cl")
-  const wishlist = JSON.parse(localStorage.getItem("wishlistID"))
-  const response = await fetch(
-    `https://gutendex.com//books?ids=${wishlist}`
-  );
+//function to show wishlist
+const showWishlist = async () => {
+  const wishlist = JSON.parse(localStorage.getItem("wishlistID"));
+  const response = await fetch(`https://gutendex.com//books?ids=${wishlist}`);
   const data = await response.json();
-  displayBooks(data.results,"wish");
-  console.log(data)
+  displayBooks(data.results, "wish");
+  console.log(data);
+};
 
 
-}
