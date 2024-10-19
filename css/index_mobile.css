@@ -1,0 +1,16 @@
+.nav-mobile{
+    width: 100%;
+    height: 80px;
+    background-color: #DFF7E5;
+}
+
+.nav-mobile{
+    display: block;
+}
+
+/* show navbar for big screen */
+@media (min-width: 1024px) {
+    .nav-mobile {
+        display: none; 
+    }
+}
