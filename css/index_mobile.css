@@ -9,7 +9,7 @@
 }
 
 
-/* show navbar for big screen */
+/* hide navbar for big screen */
 @media (min-width: 1024px) {
     .nav-mobile {
         display: none; 
