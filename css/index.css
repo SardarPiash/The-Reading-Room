@@ -109,7 +109,8 @@
     width: 100%;
     height: auto;
     display: inline-flex; 
-    align-items: flex-start; 
+    align-items: center; 
+    justify-content: center;
     gap: 10px;
     margin-top: 10px;
     margin-bottom: 4px;
