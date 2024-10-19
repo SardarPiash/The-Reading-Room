@@ -85,7 +85,7 @@
               <span class="text">Book ID</span>
               </div>
           <div class="text-data">
-            <span class="data">${data.id}</span>
+            <span class="data" style="margin-left: 4px;">${data.id}</span>
           </div>
     </div>
     <div class="text-container">
@@ -93,7 +93,7 @@
               <span class="text">Book Name</span>
               </div>
           <div class="text-data">
-            <span class="data">${data.title}</span>
+            <span class="data" style="margin-left: 4px;">${data.title}</span>
           </div>
     </div>
     <div class="text-container">
@@ -103,8 +103,8 @@
           <div class="text-data">
             ${
               data.authors.length > 0
-                ? `<span class="data">${data.authors[0]?.name} [${data.authors[0]?.birth_year}-${data.authors[0]?.death_year}]</span>`
-                : "<span>Not Specified</span>"
+                ? `<span class="data" style="margin-left: 4px;">${data.authors[0]?.name} [${data.authors[0]?.birth_year}-${data.authors[0]?.death_year}]</span>`
+                : `<span style="margin-left: 4px;">Not Specified</span>`
             }
             </div>
     </div>
@@ -116,7 +116,7 @@
   <div class="text-data">
     <span class="data">
       ${data.bookshelves
-        .map((e) => `<span style="font-size: 15px;">${e}</span>`)
+        .map((e) => `<span style="font-size: 15px; margin-left: 4px;">${e}</span>`)
         .join(", ")}
     </span>
   </div>
@@ -127,8 +127,8 @@
               <span class="text">Language</span>
               </div>
           <div class="text-data">
-            <span class="data">${data.languages.map(
-              (e) => `<span>${e} </span>`
+            <span class="data" style="margin-left: 4px;">${data.languages.map(
+              (e) => `<span >${e} </span>`
             )}</span>
           </div>
     </div>
@@ -138,7 +138,7 @@
               <span class="text">Media type</span>
               </div>
           <div class="text-data">
-            <span class="data">${data.media_type}</span>
+            <span class="data" style="margin-left: 4px;">${data.media_type}</span>
           </div>
     </div>
 
@@ -149,10 +149,10 @@
           <div class="text-data">
             ${
               data.translators.length > 0
-                ? `<span class="data">${data.translators.map(
+                ? `<span class="data" style="margin-left: 4px;">${data.translators.map(
                     (e) => `<span>${e}</span>`
                   )}</span>`
-                : "N/A"
+                : `<span style="margin-left: 4px;">N/A </span>`
             }
             </div>
     </div>
@@ -161,8 +161,8 @@
             <div class="text-div">
               <span class="text">Copy right</span>
               </div>
-          <div class="text-data">
-            <span class="data">${data.copyright === true ? "Yes" : "N/A"}</span>
+          <div class="text-data" >
+            <span class="data" style="margin-left: 4px;">${data.copyright === true ? "Yes" : "N/A"}</span>
           </div>
     </div>
 
@@ -171,23 +171,23 @@
               <span class="text">Total download</span>
               </div>
           <div class="text-data">
-            <span class="data">${data.download_count}</span>
+            <span class="data" style="margin-left: 4px;">${data.download_count}</span>
           </div>
     </div>
 
 
      <div class="text-container" style="height:auto;">
-            <div class="text-div" style="height:auto; border-bottom:2px solid black;">
+            <div class="text-div" style="height:auto; border-bottom:1px solid black;">
               <span class="text">Subjects</span>
               </div>
-          <div class="text-data" style="height:auto;border-bottom:2px solid black;">
-            <span class="data">${
+          <div class="text-data" style="height:auto;border-bottom:1px solid black;">
+            <span class="data" >${
               data.subjects.length > 0
                 ? `<span>${data.subjects.map(
                     (e, index) =>
-                      `${index === 0 ? "" : "</br>"}<span>${e}<span>`
+                      `${index === 0 ? "" : "</br>"}<span style="margin-left: 4px;">${e}<span>`
                   )} </span>`
-                : "N/A"
+                : `<span style="margin-left: 4px;">N/A </span>`
             }</span>
           </div>
     </div>

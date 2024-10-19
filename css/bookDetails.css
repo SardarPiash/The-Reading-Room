@@ -1,6 +1,7 @@
-.details-container{
+/* General Styles */
+.details-container {
   width: 60%;
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,50 +9,90 @@
   border-radius: 5px;
   padding: 10px;
   align-items: center;
+  max-width: 1000px;
 }
 
-.img-div-details{
+.img-div-details {
   padding: 10px;
   border: 2px solid black;
   border-radius: 5px;
-
-  
 }
 
-.detail-text{
-  font-size: 14px;
+.detail-text {
+  font-size: 1.4rem;
   text-decoration: underline;
   font-family: sans-serif;
 }
-.text-container{
+
+.text-container {
   display: flex;
   width: 100%;
-  height: 30px;
+  height: auto;
   background-color: aqua;
   
 }
-.text-div{
+
+.text-div {
   width: 30%;
-  height: 30px;
   border-top: 1px solid black;
   border-left: 1px solid black;
   border-right: 1px solid black;
   
 }
-.text{
-  font-size: 20px;
-  margin-left: 2px;
+
+.text {
+  font-size: 1.2rem;
+  margin-left: 4px;
 }
 
-.text-data{
+.text-data {
   width: 70%;
-  height: 30px;
-  border-top: 1px solid black;
   border-right: 1px solid black;
+  border-top: 1px solid black;
   
 }
 
-.data{
-  font-size: 20px;
-  margin-left: 2px;
+.data {
+  font-size: 1.2rem;
+  
+  
+}
+
+/* mobile devices (max width 600px) */
+@media (max-width: 600px) {
+  .details-container {
+    width: 95%;
+    padding: 5px;
+  }
+
+  .text-container {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .text-data {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .text-div {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
+/*tablet devices (max width 1024px) */
+@media (max-width: 1024px) {
+  .details-container {
+    width: 85%;
+    padding: 8px;
+  }
+
+  .text-data {
+    font-size: 1.1rem;
+  }
+
+  .text-div{
+    font-size: 1.1rem;
+  }
 }
