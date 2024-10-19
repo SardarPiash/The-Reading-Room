@@ -11,12 +11,25 @@
  //handle showfilter for mobile
  let isFilterShow = false;
   function showFilter() {
-    const showDiv = document.getElementById("extend-divv");
+    const showDiv = document.getElementById("extend-div-filter");
     isFilterShow = !isFilterShow;
     if (isFilterShow) {
       showDiv.style.display = "block"; 
     } else {
       showDiv.style.display = "none"; 
+    }
+  }
+
+
+   //handle showSearch for mobile
+ let isSearchShow = false;
+  function showSearch() {
+    const showDivSearch = document.getElementById("extend-div-search");
+    isSearchShow = !isSearchShow;
+    if (isSearchShow) {
+      showDivSearch.style.display = "block"; 
+    } else {
+      showDivSearch.style.display = "none"; 
     }
   }
 </script>
@@ -113,7 +126,7 @@
           </div>
           <div class="search-container-mobile">
             <span>
-              <button>
+              <button onclick="showSearch()">
                 <img style="width: 25px; height: 25px;" src="assets/search_icon.png" />
               </button>
             </span>
@@ -122,7 +135,8 @@
       </div>
     </nav>
 
-    <extend class="extend-div" id="extend-divv">
+    <!-- show filter and search field in mobile view -->
+    <extend class="extend-div-filter" id="extend-div-filter">
      <filter>
       <div class="filter-extend-container-mobile">
         <span style="font-size: 18px;">Filter by:</span>
@@ -134,6 +148,22 @@
       </div>
      </filter>
     </extend>
+
+    <extend class="extend-div-search" id="extend-div-search">
+      <search>
+        <div class="search-container-mobile">
+          <img class="search-icon" src="assets/search_icon.png" />
+          <input
+            type="text"
+            placeholder="Search book..."
+            value=""
+            name=""
+            class="search-input"
+            oninput="searchBooks(this.value)"
+          />
+        </div>
+      </search>
+     </extend>
     
      
     <!-- footer for mobile-tablet -->
