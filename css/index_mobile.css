@@ -42,7 +42,6 @@
     height: 100%;
     display: flex;
     padding: 1px;
-    background-color: red;
     align-items: center; 
 }
 
@@ -55,12 +54,24 @@
 }
 .search-input-container-mobile{
     width: 100%;
+    display: flex;
 }
 
 .search-container-mobile {
     position: relative;
     right: 0;
     /* background-color: red; */
+}
+.search-icon-mobile{
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    left: 27px;
+    margin-top: 15px;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    padding: 0;
 }
 
 
