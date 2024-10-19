@@ -8,10 +8,20 @@
     display: block;
 }
 
+.extend-div{
+    width: 100%;
+    height: auto;
+    background-color: bisque;
+    display: block;
+}
+
 /* show navbar for big screen */
 @media (min-width: 1024px) {
     .nav-mobile {
         display: none; 
+    }
+    .extend-div{
+        display: none;
     }
 }
 
@@ -45,9 +55,9 @@
 .filter-container-mobile, 
 .search-container-mobile {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25%; 
+    justify-content: end;
+    align-items: end;
+    width: 20%; 
 }
 
 .search-container-mobile {
@@ -58,4 +68,12 @@
 
 .filter-container-mobile {
     background-color: rgb(163, 63, 239);
+}
+.extend-div{
+    display: none;
+}
+button{
+    background: transparent;
+    border: none;
+    cursor:pointer;
 }

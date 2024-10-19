@@ -7,6 +7,18 @@
   }
 };
 
+
+ //handle showfilter for mobile
+ let isFilterShow = false;
+  function showFilter() {
+    const showDiv = document.getElementById("extend-divv");
+    isFilterShow = !isFilterShow;
+    if (isFilterShow) {
+      showDiv.style.display = "block"; 
+    } else {
+      showDiv.style.display = "none"; 
+    }
+  }
 </script>
 <!DOCTYPE html>
 <html lang="en">
@@ -93,22 +105,41 @@
             <div class="logo-text-mobile">reading room</div>
           </div>
           <div class="filter-container-mobile">
-            <span>
-              <img style="width: 30px; height: 30px;" src="assets/filter.png" />
+            <span >
+              <button onclick="showFilter()">
+                <img style="width: 25px; height: 25px;" src="assets/filter.png" />
+              </button>
             </span>
           </div>
           <div class="search-container-mobile">
             <span>
-              <img style="width: 30px; height: 30px;" src="assets/search_icon.png" />
+              <button>
+                <img style="width: 25px; height: 25px;" src="assets/search_icon.png" />
+              </button>
             </span>
           </div>
         </div>
       </div>
     </nav>
+
+    <extend class="extend-div" id="extend-divv">
+     <filter>
+      <div class="filter-extend-container-mobile">
+        <span style="font-size: 18px;">Filter by:</span>
+        <select class="filter-option" onchange="filterBooksByGenre(this.value)">
+          <option value="">All Genres</option>
+          <option value="fiction">Fiction</option>
+          <option value="history">History</option>
+        </select>
+      </div>
+     </filter>
+    </extend>
     
      
     <!-- footer for mobile-tablet -->
-    
+    <footer>
+
+    </footer>
 
 
     <!-- Body -->
@@ -158,4 +189,7 @@ function flag(value) {
 }
 
 flag(true);
+
+
+
 </script>
