@@ -33,10 +33,8 @@
 
 .text-div {
   width: 30%;
-  border-top: 1px solid black;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  
+  border: 1px solid black;
+  border-top: none;
 }
 
 .text {
@@ -46,15 +44,20 @@
 
 .text-data {
   width: 70%;
-  border-right: 1px solid black;
-  border-top: 1px solid black;
-  
+  border: 1px solid black;
+  border-top: none;
+  border-left: none;
 }
 
 .data {
   font-size: 1.2rem;
-  
-  
+}
+
+
+
+.text-container:last-child .text-div, 
+.text-container:last-child .text-data {
+  border-bottom: 1px solid black;
 }
 
 /* mobile devices (max width 600px) */
@@ -69,15 +72,21 @@
     flex-direction: column;
   }
 
-  .text-data {
+  .text-div, .text-data {
     width: 100%;
-    font-size: 1rem;
   }
 
-  .text-div {
-    width: 100%;
+  .text{
+    font-weight: bold;
+  }
+  .data{
+    padding: 2px;
+  }
+  .text-data {
+    border-left: 1px solid black;
     font-size: 1rem;
   }
+  
 }
 
 /*tablet devices (max width 1024px) */
@@ -90,7 +99,11 @@
   .text-data {
     font-size: 1.1rem;
   }
+  .text{
+    font-weight: bold;
+  }
 
+  
   .text-div{
     font-size: 1.1rem;
   }
