@@ -5,8 +5,17 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-/* nav div */
+.book-title {
+  font-family: 'Merriweather', serif;
+}
 
+.author-name {
+  font-family: 'Roboto Light', sans-serif;
+}
+
+.book-info {
+  font-family: 'Open Sans', sans-serif;
+}
 
 
 /* body css */
@@ -27,6 +36,7 @@
     width: 100%;
     height: auto;
     margin-bottom: 10px;
+    font-family: 'Merriweather', serif;
 }
 
 .body-heading-text{
