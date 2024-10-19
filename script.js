@@ -4,6 +4,7 @@ let wislistArray = JSON.parse(localStorage.getItem("wishlistID")) || [];
 const authorIcon = "assets/author.png";
 const wishIconBlack = "assets/black_love.png";
 const wishIconRed = "assets/red_love.png";
+const smallScreenView = window.matchMedia("(max-width: 1024px)");
 
 const bookStage = document.getElementById("book-lists");
 const paginationIndex = document.getElementById("paginationIndex");
@@ -46,39 +47,56 @@ function displayBooks(books, flag) {
 
     const bookImg = book.formats["image/jpeg"] || "assets/fallback.png";
 
+    // tuncate book and author name for specific device
+    const bookName =
+    book.title.length !== 0
+      ? book.title.slice(0, 16) +
+        (book.title.length > 16 ? "..." : "")
+      : "Not specified";
+
+  const bookNameDisplay = smallScreenView.matches
+    ? book.title || "Not specified"
+    : bookName;
+
+
+    const authorName =
+      book.authors.length !== 0
+        ? book.authors[0]?.name.slice(0, 16) +
+          (book.authors[0]?.name.length > 16 ? "..." : "")
+        : "Not specified";
+
+    const authorNameDisplay = smallScreenView.matches
+      ? book.authors[0]?.name || "Not specified"
+      : authorName;
+
     bookCard.innerHTML = `
-      <div class="book-div" >
-        <img src="${bookImg}" alt="Book Image" class="book-img" />
-      </div>
-      <div class="book-details">
-        <div style="font-size: 16px;">
-          ${book.title.slice(0, 16) + (book.title.length > 16 ? "..." : "")}
-        </div>
-        <div style="font-size: 10px; margin-top:2px;">
-          <img src="${authorIcon}" class="author-icon" />
-          ${
-            book.authors.length !== 0
-              ? book.authors[0]?.name.slice(0, 16) +
-                (book.authors[0]?.name.length > 16 ? "..." : "")
-              : "Not specified"
-          }
-        </div>
-        <div style="font-size: 14px;">
-          <span style="font-weight: 400;">Language:</span> ${book.languages}
-        </div>
-        <div style="font-size: 14px;">
-          <span style="font-weight: 400;">Download:</span> ${
-            book.download_count
-          }
-        </div>
-        <div class="button-div" >
-          <button class="view-button">View details</button>
-          <button class="wishlist-btn" >
-            <img src="${icon}" class="wishlist-icon"  />
-          </button>
-        </div>
-      </div>
-    `;
+  <div class="book-div">
+    <img src="${bookImg}" alt="Book Image" class="book-img" />
+  </div>
+  <div class="book-details">
+    <div style="font-size: 16px;">
+      ${bookNameDisplay}
+    </div>
+    <div style="font-size: 10px; margin-top:2px;">
+      <img src="${authorIcon}" class="author-icon" />
+      ${authorNameDisplay}
+    </div>
+    <div style="font-size: 14px;">
+      <span style="font-weight: 400;">Language:</span> ${book.languages.join(
+        ", "
+      )}
+    </div>
+    <div style="font-size: 14px;">
+      <span style="font-weight: 400;">Download:</span> ${book.download_count}
+    </div>
+    <div class="button-div">
+      <button class="view-button">View details</button>
+      <button class="wishlist-btn">
+        <img src="${icon}" class="wishlist-icon" />
+      </button>
+    </div>
+  </div>
+`;
 
     //add enent listener to wishlist button
     const wishlistButton = bookCard.querySelector(".wishlist-btn");
@@ -92,7 +110,7 @@ function displayBooks(books, flag) {
     const detailsButton = bookCard.querySelector(".view-button");
     detailsButton.addEventListener("click", () => {
       //making dynamic url using book-id
-      window.location.href = `bookdetails.html?id=${book.id}`
+      window.location.href = `bookdetails.html?id=${book.id}`;
     });
 
     bookStage.appendChild(bookCard);
@@ -128,5 +146,3 @@ const showWishlist = async () => {
   displayBooks(data.results, "wish");
   console.log(data);
 };
-
-
