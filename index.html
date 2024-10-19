@@ -84,66 +84,28 @@
 
     <!-- Navbar  for mobile-tablet view-->
     <nav class="nav-mobile">
-      <div>
-        <div class="nav-container">
-          <div class="icon-container">
-            <div class="img-div">
-              <img
-                class="logo-img"
-                src="assets/logo.png"
-                alt="The Reading Room Logo"
-              />
+      <div class="nav-container-mobile">
+        <div class="section-divider">
+          <div class="icon-container-mobile">
+            <div class="img-div-mobile">
+              <img class="logo-img" src="assets/logo.png" alt="The Reading Room Logo" />
             </div>
-            <div class="logo-text">reading room</div>
+            <div class="logo-text-mobile">reading room</div>
           </div>
-
-          <div class="navigation-container">
-            <button onclick="fetchAPI();  flag(true)" class="nav-button">
-              <div class="navigation-element">
-                <span>
-                  <img
-                    src="assets/home.png"
-                    style="width: 20px; height: 20px;"
-                  />
-                </span>
-                <span style="margin-left: 2px; margin-top: 4px;">Home</span>
-              </div>
-            </button>
-            <button onclick="showWishlist();  flag(false)" class="nav-button">
-              <div class="navigation-element" style="margin-left: 20px;">
-                <span>
-                  <img
-                    src="assets/wishlist.png"
-                    style="width: 16px; height: 16px; margin-top: 4px;"
-                  />
-                </span>
-                <span style="margin-left: 2px; margin-top: 4px;">Wishlist</span>
-              </div>
-            </button>
+          <div class="filter-container-mobile">
+            <span>
+              <img style="width: 30px; height: 30px;" src="assets/filter.png" />
+            </span>
           </div>
-          <!-- <div class="filter-container">
-            <span style="font-size: 18px;">Filter by:</span>
-            <select class="filter-option" onchange="filterBooksByGenre(this.value)">
-              <option value="">All Genres</option>
-              <option value="fiction">Fiction</option>
-              <option value="history">History</option>
-            </select>
-          </div> -->
-          <!-- <div class="search-container">
-            <img class="search-icon" src="assets/search_icon.png" />
-            <input
-              type="text"
-              placeholder="Search book..."
-              value=""
-              name=""
-              class="search-input"
-              oninput="searchBooks(this.value)"
-            />
-          </div> -->
-
+          <div class="search-container-mobile">
+            <span>
+              <img style="width: 30px; height: 30px;" src="assets/search_icon.png" />
+            </span>
+          </div>
         </div>
       </div>
     </nav>
+    
      
     <!-- footer for mobile-tablet -->
     
