@@ -24,7 +24,7 @@
           </div>
 
           <div class="navigation-container">
-            <button onclick="fetchAPI();  flag(true)" class="nav-button">
+            <button onclick="window.location.href='index.html'" class="nav-button">
               <div class="navigation-element">
                 <span>
                   <img
@@ -35,7 +35,7 @@
                 <span style="margin-left: 2px; margin-top: 4px">Home</span>
               </div>
             </button>
-            <button onclick="showWishlist();  flag(false)" class="nav-button">
+            <button onclick="window.location.href='index.html#wishlist'" class="nav-button">
               <div class="navigation-element" style="margin-left: 20px">
                 <span>
                   <img
@@ -63,7 +63,7 @@
     </div>
   </body>
 </html>
-
+<script src="script.js"></script>
 <script>
   //show bookdetails function
   const handleShowBookDteails = async (e) => {
@@ -206,4 +206,10 @@
     }
   }
   getBookID();
+
+
+  //function to handle route
+  function handleRoute(){
+
+  }
 </script>
