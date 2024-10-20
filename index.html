@@ -5,6 +5,21 @@
     } else {
       fetchAPI();
     }
+
+    //show search and filter preference
+    const searchPreference = localStorage.getItem("searchBook");
+    const searchPage = localStorage.getItem("searchPage");
+    const filterPreference = localStorage.getItem("filter");
+
+    if(searchPreference){
+      document.querySelector('.search-input').value = searchPreference;
+      fetchAPI(searchPreference)
+    }else if(filterPreference){
+      document.querySelector('.filter-option').value = filterPreference;
+      fetchAPI(filterPreference)
+    }else{
+      fetchAPI();
+    }
   };
 
   //handle showfilter for mobile

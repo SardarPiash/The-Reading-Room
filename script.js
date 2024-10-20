@@ -1,5 +1,6 @@
 let currentPage = 1;
 let isOpenBookDetails = false;
+let isResponse = false;
 let wislistArray = JSON.parse(localStorage.getItem("wishlistID")) || [];
 const authorIcon = "assets/author.png";
 const wishIconBlack = "assets/black_love.png";
@@ -11,9 +12,12 @@ const paginationIndex = document.getElementById("paginationIndex");
 
 async function fetchAPI(query = "", page = 1) {
   try {
+    isResponse = false
     const response = await fetch(
       `https://gutendex.com/books/?search=${query}&page=${page}`
     );
+      isResponse = true;
+    
     const data = await response.json();
     displayBooks(data.results, "all");
   } catch (error) {
@@ -113,7 +117,20 @@ function displayBooks(books, flag) {
       window.location.href = `bookdetails.html?id=${book.id}`;
     });
 
+    
     bookStage.appendChild(bookCard);
+    //bookCard.classList.add("show");
+// if(isResponse){
+//   requestAnimationFrame(() => {
+//     bookCard.classList.add("show");
+//   });
+//}
+//else{
+  
+//     // setTimeout(() => {
+//     //   bookCard.classList.add("show");
+//     // }, 100);
+// }
   });
    const paginationDiv = document.createElement('div');
    paginationDiv.innerHTML = `
@@ -127,7 +144,7 @@ function displayBooks(books, flag) {
    paginationID.appendChild(paginationDiv)
 }
 
-fetchAPI();
+
 
 //pagination function
 function changePage(page) {
@@ -139,12 +156,14 @@ function changePage(page) {
 
 //search function
 function searchBooks(query) {
-  console.log(query);
+  localStorage.setItem('searchBook',query);
+  localStorage.setItem('searchPage',currentPage);
   fetchAPI(query, currentPage);
 }
 
 //filter function
 function filterBooksByGenre(genre) {
+  localStorage.setItem("filter",genre)
   fetchAPI(genre, currentPage);
 }
 
