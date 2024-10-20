@@ -5,7 +5,6 @@ const authorIcon = "assets/author.png";
 const wishIconBlack = "assets/black_love.png";
 const wishIconRed = "assets/red_love.png";
 const smallScreenView = window.matchMedia("(max-width: 1024px)");
-
 const bookStage = document.getElementById("book-lists");
 const paginationIndex = document.getElementById("paginationIndex");
 
@@ -113,6 +112,16 @@ function displayBooks(books, flag) {
 
     bookStage.appendChild(bookCard);
   });
+   const paginationDiv = document.createElement('div');
+   paginationDiv.innerHTML = `
+   
+    <div class="pagination" style="margin-bottom: 60px;">
+      <button class="pageIndicator" onclick="changePage(currentPage - 1)">Previous</button>
+      <span id="pageIndicator" class="pageIndicator">Page 1</span>
+      <button class="pageIndicator" onclick="changePage(currentPage + 1)">Next</button>
+    </div>
+   `;
+   bookStage.appendChild(paginationDiv)
 }
 
 fetchAPI();

@@ -226,7 +226,7 @@
 .pagination {
   display: flex;
   margin: 20px 0;
-  position:absolute;
+  position:relative;
   justify-content:center;
   align-items: end;
   bottom:0;
