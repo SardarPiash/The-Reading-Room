@@ -159,11 +159,7 @@
 
 }
 
-.pagination {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-}
+
 
 .slide-in {
   transform: translateX(-100%);
@@ -226,4 +222,22 @@
   100% {
     opacity: 0;
   }
+}
+.pagination {
+  display: flex;
+  margin: 20px 0;
+  position:absolute;
+  justify-content:center;
+  align-items: end;
+  bottom:0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.pageIndicator{
+  border: 1px solid rgb(112, 110, 110);
+  font-size: 20px;
+  margin-left: 5px;
+  padding: 5px;
+  border-radius: 8px;
+  font-family:'Times New Roman', Times, serif;
 }
