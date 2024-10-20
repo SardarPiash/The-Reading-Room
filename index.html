@@ -1,35 +1,33 @@
 <script>
   window.onload = function () {
-  if (window.location.hash === '#wishlist') {
-    showWishlist();
-  } else {
-    fetchAPI(); 
-  }
-};
+    if (window.location.hash === "#wishlist") {
+      showWishlist();
+    } else {
+      fetchAPI();
+    }
+  };
 
-
- //handle showfilter for mobile
- let isFilterShow = false;
+  //handle showfilter for mobile
+  let isFilterShow = false;
   function showFilter() {
     const showDiv = document.getElementById("extend-div-filter");
     isFilterShow = !isFilterShow;
     if (isFilterShow) {
-      showDiv.style.display = "block"; 
+      showDiv.style.display = "block";
     } else {
-      showDiv.style.display = "none"; 
+      showDiv.style.display = "none";
     }
   }
 
-
-   //handle showSearch for mobile
- let isSearchShow = false;
+  //handle showSearch for mobile
+  let isSearchShow = false;
   function showSearch() {
     const showDivSearch = document.getElementById("extend-div-search");
     isSearchShow = !isSearchShow;
     if (isSearchShow) {
-      showDivSearch.style.display = "block"; 
+      showDivSearch.style.display = "block";
     } else {
-      showDivSearch.style.display = "none"; 
+      showDivSearch.style.display = "none";
     }
   }
 </script>
@@ -40,7 +38,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Reading Room</title>
     <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/index_destop.css" />
+    <link rel="stylesheet" href="css/index_desktop.css" />
     <link rel="stylesheet" href="css/index_mobile.css" />
   </head>
   <body>
@@ -65,27 +63,30 @@
                 <span>
                   <img
                     src="assets/home.png"
-                    style="width: 20px; height: 20px;"
+                    style="width: 20px; height: 20px"
                   />
                 </span>
-                <span style="margin-left: 2px; margin-top: 4px;">Home</span>
+                <span style="margin-left: 2px; margin-top: 4px">Home</span>
               </div>
             </button>
             <button onclick="showWishlist();  flag(false)" class="nav-button">
-              <div class="navigation-element" style="margin-left: 20px;">
+              <div class="navigation-element" style="margin-left: 20px">
                 <span>
                   <img
                     src="assets/wishlist.png"
-                    style="width: 16px; height: 16px; margin-top: 4px;"
+                    style="width: 16px; height: 16px; margin-top: 4px"
                   />
                 </span>
-                <span style="margin-left: 2px; margin-top: 4px;">Wishlist</span>
+                <span style="margin-left: 2px; margin-top: 4px">Wishlist</span>
               </div>
             </button>
           </div>
           <div class="filter-container">
-            <span style="font-size: 18px;">Filter by:</span>
-            <select class="filter-option" onchange="filterBooksByGenre(this.value)">
+            <span style="font-size: 18px">Filter by:</span>
+            <select
+              class="filter-option"
+              onchange="filterBooksByGenre(this.value)"
+            >
               <option value="">All Genres</option>
               <option value="fiction">Fiction</option>
               <option value="history">History</option>
@@ -102,7 +103,6 @@
               oninput="searchBooks(this.value)"
             />
           </div>
-
         </div>
       </div>
     </nav>
@@ -113,21 +113,31 @@
         <div class="section-divider">
           <div class="icon-container-mobile">
             <div class="img-div-mobile">
-              <img class="logo-img" src="assets/logo.png" alt="The Reading Room Logo" />
+              <img
+                class="logo-img"
+                src="assets/logo.png"
+                alt="The Reading Room Logo"
+              />
             </div>
             <div class="logo-text-mobile">reading room</div>
           </div>
           <div class="filter-container-mobile">
-            <span >
+            <span>
               <button onclick="showFilter()">
-                <img style="width: 25px; height: 25px;" src="assets/filter.png" />
+                <img
+                  style="width: 25px; height: 25px"
+                  src="assets/filter.png"
+                />
               </button>
             </span>
           </div>
           <div class="search-container-mobile">
             <span>
               <button onclick="showSearch()">
-                <img style="width: 25px; height: 25px;" src="assets/search_icon.png" />
+                <img
+                  style="width: 25px; height: 25px"
+                  src="assets/search_icon.png"
+                />
               </button>
             </span>
           </div>
@@ -137,16 +147,19 @@
 
     <!-- show filter and search field in mobile view -->
     <extend class="extend-div-filter" id="extend-div-filter">
-     <filter>
-      <div class="filter-extend-container-mobile">
-        <span style="font-size: 18px;">Filter by:</span>
-        <select class="filter-option" onchange="filterBooksByGenre(this.value)">
-          <option value="">All Genres</option>
-          <option value="fiction">Fiction</option>
-          <option value="history">History</option>
-        </select>
-      </div>
-     </filter>
+      <filter>
+        <div class="filter-extend-container-mobile">
+          <span style="font-size: 18px">Filter by:</span>
+          <select
+            class="filter-option"
+            onchange="filterBooksByGenre(this.value)"
+          >
+            <option value="">All Genres</option>
+            <option value="fiction">Fiction</option>
+            <option value="history">History</option>
+          </select>
+        </div>
+      </filter>
     </extend>
 
     <extend class="extend-div-search" id="extend-div-search">
@@ -163,21 +176,12 @@
           />
         </div>
       </search>
-     </extend>
-    
-     
-    <!-- footer for mobile-tablet -->
-    <footer>
-
-    </footer>
-
+    </extend>
 
     <!-- Body -->
     <main>
-      <div class="main-heading" style="margin-top: 10px;">
-     <div id="heading-text">
-
-    </div>
+      <div class="main-heading" style="margin-top: 10px">
+        <div id="heading-text"></div>
       </div>
       <!-- show books code -->
       <div class="body" id="book-lists">
@@ -189,6 +193,21 @@
         </div>
       </div>
     </main>
+
+    <!-- footer for mobile-tablet -->
+    <footer class="footer">
+      <div class="home-container-mobile">
+        <button onclick="fetchAPI();  flag(true)">
+          <img src="assets/home.png" style="width: 20px; height: 20px;" />
+        </button>
+      </div>
+      <div style="width: 40%; height: 100%;"></div>
+      <div class="wishlist-container-mobile">
+        <button onclick="showWishlist();  flag(false)">
+          <img src="assets/wishlist.png" style="width: 20px; height: 20px;" />
+        </button>
+      </div>
+    </footer>
 
     <!-- pagination code -->
     <div class="pagination">
@@ -202,24 +221,23 @@
 </html>
 
 <script>
-function flag(value) {
-  const heading = document.getElementById("heading-text");
-  const loading = document.getElementById("book-lists");
-  const headingText = `<span class="body-heading-text">${value ? "Find your books" : "Your wishlist"}</span>`;
-  heading.innerHTML = ""; 
-  heading.innerHTML = headingText;
-  loading.innerHTML = `
+  function flag(value) {
+    const heading = document.getElementById("heading-text");
+    const loading = document.getElementById("book-lists");
+    const headingText = `<span class="body-heading-text">${
+      value ? "Find your books" : "Your wishlist"
+    }</span>`;
+    heading.innerHTML = "";
+    heading.innerHTML = headingText;
+    loading.innerHTML = `
   <div class="loading-container">
           <span class="loading-text">Loading</span>
           <span class="dot dot1">.</span>
           <span class="dot dot2">.</span>
           <span class="dot dot3">.</span>
         </div>
-  `
-}
+  `;
+  }
 
-flag(true);
-
-
-
+  flag(true);
 </script>
