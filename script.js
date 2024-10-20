@@ -12,12 +12,12 @@ const paginationIndex = document.getElementById("paginationIndex");
 
 async function fetchAPI(query = "", page = 1) {
   try {
-    isResponse = false
+    isResponse = false;
     const response = await fetch(
       `https://gutendex.com/books/?search=${query}&page=${page}`
     );
-      isResponse = true;
-    
+    isResponse = true;
+
     const data = await response.json();
     displayBooks(data.results, "all");
   } catch (error) {
@@ -44,7 +44,7 @@ function handleWishList(id, iconElement) {
 function displayBooks(books, flag) {
   bookStage.innerHTML = "";
   paginationID.innerHTML = "";
-  bookStage.classList.add('book-stage');
+  bookStage.classList.add("book-stage");
   books.forEach((book) => {
     const isInWishlist = wislistArray.includes(book.id);
     const icon = isInWishlist ? wishIconRed : wishIconBlack;
@@ -117,23 +117,22 @@ function displayBooks(books, flag) {
       window.location.href = `bookdetails.html?id=${book.id}`;
     });
 
-    
     bookStage.appendChild(bookCard);
     //bookCard.classList.add("show");
-// if(isResponse){
-//   requestAnimationFrame(() => {
-//     bookCard.classList.add("show");
-//   });
-//}
-//else{
-  
-//     // setTimeout(() => {
-//     //   bookCard.classList.add("show");
-//     // }, 100);
-// }
+    // if(isResponse){
+    //   requestAnimationFrame(() => {
+    //     bookCard.classList.add("show");
+    //   });
+    //}
+    //else{
+
+    //     // setTimeout(() => {
+    //     //   bookCard.classList.add("show");
+    //     // }, 100);
+    // }
   });
-   const paginationDiv = document.createElement('div');
-   paginationDiv.innerHTML = `
+  const paginationDiv = document.createElement("div");
+  paginationDiv.innerHTML = `
     
     <div class="pagination" style="margin-bottom: 60px;">
       <button class="pageIndicator" onclick="changePage(currentPage - 1)">Previous</button>
@@ -141,10 +140,8 @@ function displayBooks(books, flag) {
       <button class="pageIndicator" onclick="changePage(currentPage + 1)">Next</button>
     </div>
    `;
-   paginationID.appendChild(paginationDiv)
+  paginationID.appendChild(paginationDiv);
 }
-
-
 
 //pagination function
 function changePage(page) {
@@ -156,14 +153,14 @@ function changePage(page) {
 
 //search function
 function searchBooks(query) {
-  localStorage.setItem('searchBook',query);
-  localStorage.setItem('searchPage',currentPage);
+  localStorage.setItem("searchBook", query);
+  localStorage.setItem("searchPage", currentPage);
   fetchAPI(query, currentPage);
 }
 
 //filter function
 function filterBooksByGenre(genre) {
-  localStorage.setItem("filter",genre)
+  localStorage.setItem("filter", genre);
   fetchAPI(genre, currentPage);
 }
 

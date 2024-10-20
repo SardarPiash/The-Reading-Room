@@ -11,13 +11,13 @@
     const searchPage = localStorage.getItem("searchPage");
     const filterPreference = localStorage.getItem("filter");
 
-    if(searchPreference){
-      document.querySelector('.search-input').value = searchPreference;
-      fetchAPI(searchPreference)
-    }else if(filterPreference){
-      document.querySelector('.filter-option').value = filterPreference;
-      fetchAPI(filterPreference)
-    }else{
+    if (searchPreference) {
+      document.querySelector(".search-input").value = searchPreference;
+      fetchAPI(searchPreference);
+    } else if (filterPreference) {
+      document.querySelector(".filter-option").value = filterPreference;
+      fetchAPI(filterPreference);
+    } else {
       fetchAPI();
     }
   };
@@ -207,9 +207,7 @@
           <span class="dot dot3">.</span>
         </div>
       </div>
-      <div id="paginationID">
-
-      </div>
+      <div id="paginationID"></div>
     </main>
 
     <!-- footer for mobile-tablet -->
@@ -226,8 +224,6 @@
         </button>
       </div>
     </footer>
-
-    
 
     <script src="script.js"></script>
   </body>

@@ -1,25 +1,24 @@
 /* navbar css */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
 .nav-container,
 .navigation-element,
 .filter-container,
 .search-input {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .book-title {
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
 }
 
 .author-name {
-  font-family: 'Roboto Light', sans-serif;
+  font-family: "Roboto Light", sans-serif;
 }
 
 .book-info {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
-
 
 /* body css */
 
@@ -30,7 +29,6 @@
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 5px;
   padding: 0px 110px;
-
 }
 
 @media (max-width: 1024px) {
@@ -43,10 +41,8 @@
   width: 100%;
   height: auto;
   margin-bottom: 10px;
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
 }
-
-
 
 .body-heading-text {
   width: auto;
@@ -118,8 +114,6 @@
   margin-left: 20px;
 }
 
-
-
 .author-icon {
   width: 16px;
   height: 16px;
@@ -161,10 +155,7 @@
 .wishlist-icon {
   width: 20px;
   height: 20px;
-
 }
-
-
 
 .slide-in {
   transform: translateX(-100%);
@@ -191,7 +182,6 @@
 }
 
 .loading-text {
-
   margin-right: 5px;
 }
 
@@ -214,7 +204,6 @@
 }
 
 @keyframes blink {
-
   0%,
   20% {
     opacity: 0;
@@ -231,23 +220,21 @@
 .pagination {
   display: flex;
   margin: 20px 0;
-  position:relative;
-  justify-content:center;
+  position: relative;
+  justify-content: center;
   align-items: end;
-  bottom:0;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
 }
-.pageIndicator{
+.pageIndicator {
   border: 1px solid rgb(112, 110, 110);
   font-size: 20px;
   margin-left: 5px;
   padding: 5px;
   border-radius: 8px;
-  font-family:'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
-
-
 
 /* book animation */
 /* .book-card {
