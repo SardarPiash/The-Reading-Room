@@ -26,6 +26,7 @@
     display: flex;
     position: relative;
     align-items: center;
+    
 }
 
 .icon-container {
@@ -33,22 +34,21 @@
     height: 100%;
     display: flex;
     padding: 1px;
-    /* background-color: red; */
+    align-items: center;
 }
 
 .img-div {
-    width: 55px;
+    width: 95px;
 }
 
 .logo-img {
-    width: 80px;
-    height: 50px;
+    width: 130px;
+    height: 100%;
 }
 
 .logo-text {
-    margin-top: 18px;
-    font-size: 18px;
-    /* font-family: 'Montserrat', sans-serif; */
+    margin-top: 5px;
+    font-size: 30px;
     color: black;
     margin-left: 2px;
 }
@@ -57,8 +57,9 @@
     width: 30%;
     height: 100%;
     display: flex;
-    justify-content: start;
-    /* background-color: rgb(101, 236, 77); */
+    justify-content: center;
+    align-items: start;
+    margin-top: 25px;
 }
 
 .nav-button {

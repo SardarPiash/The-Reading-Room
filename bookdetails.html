@@ -59,7 +59,25 @@
       </div>
     </nav>
 
-    <div>
+    <!-- Navbar  for mobile-tablet view-->
+    <nav class="nav-mobile" style="margin-bottom: 10px;">
+      <div class="nav-container-mobile">
+        <div class="section-divider">
+          <div class="icon-container-mobile">
+            <div class="img-div-mobile">
+              <img
+                class="logo-img-mobile"
+                src="assets/logo.png"
+                alt="The Reading Room Logo"
+              />
+            </div>
+            <div class="logo-text-mobile">reading room</div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div style="margin-bottom: 50px;">
       <main id="book-details" style="display: flex; justify-content: center">
         <div class="loading-container">
           <span class="loading-text">Loading</span>
@@ -69,6 +87,22 @@
         </div>
       </main>
     </div>
+
+    <!-- bottom navbar for mobile -->
+    <footer class="footer">
+      <div class="home-container-mobile">
+        <button onclick="window.location.href='index.html'">
+          <img src="assets/home.png" style="width: 20px; height: 20px" />
+        </button>
+      </div>
+      <div style="width: 40%; height: 100%"></div>
+      <div class="wishlist-container-mobile">
+        <button onclick="window.location.href='index.html#wishlist'">
+          <img src="assets/wishlist.png" style="width: 20px; height: 20px" />
+        </button>
+      </div>
+    </footer>
+
   </body>
 </html>
 <script src="script.js"></script>
@@ -211,6 +245,8 @@
     </div>
  
       </div>
+      
+    
   
   `;
   };
