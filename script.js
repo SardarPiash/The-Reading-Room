@@ -6,6 +6,7 @@ const wishIconBlack = "assets/black_love.png";
 const wishIconRed = "assets/red_love.png";
 const smallScreenView = window.matchMedia("(max-width: 1024px)");
 const bookStage = document.getElementById("book-lists");
+const paginationID = document.getElementById("paginationID");
 const paginationIndex = document.getElementById("paginationIndex");
 
 async function fetchAPI(query = "", page = 1) {
@@ -38,6 +39,8 @@ function handleWishList(id, iconElement) {
 
 function displayBooks(books, flag) {
   bookStage.innerHTML = "";
+  paginationID.innerHTML = "";
+  bookStage.classList.add('book-stage');
   books.forEach((book) => {
     const isInWishlist = wislistArray.includes(book.id);
     const icon = isInWishlist ? wishIconRed : wishIconBlack;
@@ -114,14 +117,14 @@ function displayBooks(books, flag) {
   });
    const paginationDiv = document.createElement('div');
    paginationDiv.innerHTML = `
-   
+    
     <div class="pagination" style="margin-bottom: 60px;">
       <button class="pageIndicator" onclick="changePage(currentPage - 1)">Previous</button>
       <span id="pageIndicator" class="pageIndicator">Page 1</span>
       <button class="pageIndicator" onclick="changePage(currentPage + 1)">Next</button>
     </div>
    `;
-   bookStage.appendChild(paginationDiv)
+   paginationID.appendChild(paginationDiv)
 }
 
 fetchAPI();

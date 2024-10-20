@@ -24,10 +24,13 @@
 /* body css */
 
 .body {
+  width: auto;
+  height: auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 5px;
   padding: 0px 110px;
+
 }
 
 @media (max-width: 1024px) {
@@ -42,6 +45,8 @@
   margin-bottom: 10px;
   font-family: 'Merriweather', serif;
 }
+
+
 
 .body-heading-text {
   width: auto;
