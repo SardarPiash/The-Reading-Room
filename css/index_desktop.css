@@ -1,4 +1,4 @@
-.nav-desktop{
+.nav-desktop {
     width: 100%;
     height: 80px;
     background-color: #DFF7E5;
@@ -7,20 +7,20 @@
 
 /* show navbar for small screen */
 .nav-desktop {
-    display: none; 
+    display: none;
 }
 
 
 /* show navbar for big screen */
 @media (min-width: 1024px) {
     .nav-desktop {
-        display: block; 
+        display: block;
     }
 }
 
 
 
-.nav-container-desktop{
+.nav-container-desktop {
     width: 100%;
     height: 100%;
     display: flex;
@@ -28,7 +28,7 @@
     align-items: center;
 }
 
-.icon-container{
+.icon-container {
     width: 20%;
     height: 100%;
     display: flex;
@@ -36,16 +36,16 @@
     /* background-color: red; */
 }
 
-.img-div{
-   width: 55px;
+.img-div {
+    width: 55px;
 }
 
-.logo-img{
-   width: 80px;
-   height: 50px;
+.logo-img {
+    width: 80px;
+    height: 50px;
 }
 
-.logo-text{
+.logo-text {
     margin-top: 18px;
     font-size: 18px;
     /* font-family: 'Montserrat', sans-serif; */
@@ -53,14 +53,15 @@
     margin-left: 2px;
 }
 
-.navigation-container{
+.navigation-container {
     width: 30%;
     height: 100%;
     display: flex;
-    justify-content:start;
+    justify-content: start;
     /* background-color: rgb(101, 236, 77); */
 }
-.nav-button{
+
+.nav-button {
     border: none;
     outline: none;
     cursor: pointer;
@@ -69,23 +70,24 @@
     height: 30px;
 }
 
-.navigation-element{
+.navigation-element {
     display: inline-flex;
     margin-top: 20px;
 }
 
-.filter-container{
+.filter-container {
     width: 200px;
     /* background-color: rgb(163, 63, 239); */
     padding-top: 16px;
 }
 
-.filter-option{
+.filter-option {
     width: 100px;
     height: 30px;
     background-color: #DFF7E5;
     border-radius: 5px;
 }
+
 .search-container {
     position: absolute;
     right: 0;
@@ -107,10 +109,12 @@
     box-sizing: border-box;
     color: black;
 }
-.search-input::placeholder{
+
+.search-input::placeholder {
     color: black;
 }
-.search-input:focus{
+
+.search-input:focus {
     border: 1px solid black;
     border-radius: 5px;
     outline: none;

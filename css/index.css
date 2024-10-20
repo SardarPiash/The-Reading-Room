@@ -1,8 +1,11 @@
 /* navbar css */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-.nav-container, .navigation-element, .filter-container, .search-input {
-    font-family: 'Montserrat', sans-serif;
+.nav-container,
+.navigation-element,
+.filter-container,
+.search-input {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .book-title {
@@ -21,186 +24,199 @@
 /* body css */
 
 .body {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 5px;
-    padding: 0px 110px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 5px;
+  padding: 0px 110px;
 }
 
 @media (max-width: 1024px) {
-.body{
-  padding: 0px 70px;
-}
-}
-.main-heading{
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-    font-family: 'Merriweather', serif;
+  .body {
+    padding: 0px 70px;
+  }
 }
 
-.body-heading-text{
-    width: auto;
-    height: auto;
-    font-size: 40px;
-    display: flex;
-    justify-content: center;
-    text-decoration: underline;
-    color: rgb(0, 0, 0);
+.main-heading {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  font-family: 'Merriweather', serif;
 }
+
+.body-heading-text {
+  width: auto;
+  height: auto;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+  color: rgb(0, 0, 0);
+}
+
 @media (max-width: 1024px) {
-  .body-heading-text{
+  .body-heading-text {
     font-size: 30px;
   }
 }
 
 .book-card {
-    width: 100%;
-    height: 250px;
-    background-color: rgb(230, 224, 224);
-    border-radius: 8px;
-    text-align: center;
-    transition: transform 0.2s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    margin-bottom: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    border: 1px solid rgb(196, 194, 194);
-    border-radius: 8px;
+  width: 100%;
+  height: 250px;
+  background-color: rgb(230, 224, 224);
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgb(196, 194, 194);
+  border-radius: 8px;
 }
+
 @media (max-width: 1024px) {
-    .book-card{
-      height: 350px;
-    }
+  .book-card {
+    height: 350px;
+  }
 }
 
 .book-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .book-div {
-    width: 100%;
-    height: 200px;
-    position: relative;
-    overflow: hidden;  
+  width: 100%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
 }
 
 .book-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 4px 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 4px 0px;
 }
 
 .book-details {
-    width: 100%; 
-    height: auto;
-    padding: 4px;
-    text-align: left;
-    margin-top: 2px; 
-    margin-left: 20px;
+  width: 100%;
+  height: auto;
+  padding: 4px;
+  text-align: left;
+  margin-top: 2px;
+  margin-left: 20px;
 }
 
 
 
 .author-icon {
-    width: 16px;
-    height: 16px;
-    margin-right: 5px;
-    vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  vertical-align: middle;
 }
+
 .button-div {
-    width: 100%;
-    height: auto;
-    display: inline-flex; 
-    align-items: center; 
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-    margin-bottom: 4px;
+  width: 100%;
+  height: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 4px;
 }
-.view-button{
-    margin-top: 4px;
-    height: 30px;
-    border-radius: 6px;
-    background-color: rgb(181, 200, 199);
+
+.view-button {
+  margin-top: 4px;
+  height: 30px;
+  border-radius: 6px;
+  background-color: rgb(181, 200, 199);
 }
-.view-button:hover{
-    background-color: rgb(194, 218, 216);
+
+.view-button:hover {
+  background-color: rgb(194, 218, 216);
 }
 
 .wishlist-btn {
-    width: 30px;
-    height: 30px;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    margin-top: 6px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  margin-top: 6px;
 }
 
 .wishlist-icon {
-    width: 20px;
-    height: 20px;
-    
+  width: 20px;
+  height: 20px;
+
 }
 
 .pagination {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-  }
-  .slide-in {
-    transform: translateX(-100%);
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .slide-in.show {
-    transform: translateX(0);
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.slide-in {
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide-in.show {
+  transform: translateX(0);
+}
+
+.loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #333;
+}
+
+.loading-text {
+
+  margin-right: 5px;
+}
+
+.dot {
+  font-size: 24px;
+  color: #333;
+  animation: blink 1.2s infinite;
+}
+
+.dot1 {
+  animation-delay: 0s;
+}
+
+.dot2 {
+  animation-delay: 0.2s;
+}
+
+.dot3 {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+
+  0%,
+  20% {
+    opacity: 0;
   }
 
-  .loading-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    color: #333;
+  50% {
+    opacity: 1;
   }
-  
-  .loading-text {
-    
-    margin-right: 5px;
+
+  100% {
+    opacity: 0;
   }
-  
-  .dot {
-    font-size: 24px;
-    color: #333;
-    animation: blink 1.2s infinite;
-  }
-  
-  .dot1 {
-    animation-delay: 0s;
-  }
-  .dot2 {
-    animation-delay: 0.2s;
-  }
-  .dot3 {
-    animation-delay: 0.4s;
-  }
-  
-  @keyframes blink {
-    0%, 20% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
+}

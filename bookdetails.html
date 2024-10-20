@@ -26,7 +26,10 @@
           </div>
 
           <div class="navigation-container">
-            <button onclick="window.location.href='index.html'" class="nav-button">
+            <button
+              onclick="window.location.href='index.html'"
+              class="nav-button"
+            >
               <div class="navigation-element">
                 <span>
                   <img
@@ -37,7 +40,10 @@
                 <span style="margin-left: 2px; margin-top: 4px">Home</span>
               </div>
             </button>
-            <button onclick="window.location.href='index.html#wishlist'" class="nav-button">
+            <button
+              onclick="window.location.href='index.html#wishlist'"
+              class="nav-button"
+            >
               <div class="navigation-element" style="margin-left: 20px">
                 <span>
                   <img
@@ -118,7 +124,9 @@
   <div class="text-data">
     <span class="data">
       ${data.bookshelves
-        .map((e) => `<span style="font-size: 15px; margin-left: 4px;">${e}</span>`)
+        .map(
+          (e) => `<span style="font-size: 15px; margin-left: 4px;">${e}</span>`
+        )
         .join(", ")}
     </span>
   </div>
@@ -140,7 +148,9 @@
               <span class="text">Media type</span>
               </div>
           <div class="text-data">
-            <span class="data" style="margin-left: 4px;">${data.media_type}</span>
+            <span class="data" style="margin-left: 4px;">${
+              data.media_type
+            }</span>
           </div>
     </div>
 
@@ -164,7 +174,9 @@
               <span class="text">Copy right</span>
               </div>
           <div class="text-data" >
-            <span class="data" style="margin-left: 4px;">${data.copyright === true ? "Yes" : "N/A"}</span>
+            <span class="data" style="margin-left: 4px;">${
+              data.copyright === true ? "Yes" : "N/A"
+            }</span>
           </div>
     </div>
 
@@ -173,7 +185,9 @@
               <span class="text">Total download</span>
               </div>
           <div class="text-data">
-            <span class="data" style="margin-left: 4px;">${data.download_count}</span>
+            <span class="data" style="margin-left: 4px;">${
+              data.download_count
+            }</span>
           </div>
     </div>
 
@@ -187,7 +201,9 @@
               data.subjects.length > 0
                 ? `<span>${data.subjects.map(
                     (e, index) =>
-                      `${index === 0 ? "" : "</br>"}<span style="margin-left: 4px;">${e}<span>`
+                      `${
+                        index === 0 ? "" : "</br>"
+                      }<span style="margin-left: 4px;">${e}<span>`
                   )} </span>`
                 : `<span style="margin-left: 4px;">N/A </span>`
             }</span>
@@ -209,9 +225,6 @@
   }
   getBookID();
 
-
   //function to handle route
-  function handleRoute(){
-
-  }
+  function handleRoute() {}
 </script>

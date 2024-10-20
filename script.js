@@ -49,15 +49,13 @@ function displayBooks(books, flag) {
 
     // tuncate book and author name for specific device
     const bookName =
-    book.title.length !== 0
-      ? book.title.slice(0, 16) +
-        (book.title.length > 16 ? "..." : "")
-      : "Not specified";
+      book.title.length !== 0
+        ? book.title.slice(0, 16) + (book.title.length > 16 ? "..." : "")
+        : "Not specified";
 
-  const bookNameDisplay = smallScreenView.matches
-    ? book.title || "Not specified"
-    : bookName;
-
+    const bookNameDisplay = smallScreenView.matches
+      ? book.title || "Not specified"
+      : bookName;
 
     const authorName =
       book.authors.length !== 0

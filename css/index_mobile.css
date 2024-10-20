@@ -1,10 +1,10 @@
-.nav-mobile{
+.nav-mobile {
     width: 100%;
     height: 60px;
     background-color: #DFF7E5;
 }
 
-.nav-mobile{
+.nav-mobile {
     display: block;
 }
 
@@ -12,11 +12,13 @@
 /* hide navbar for big screen */
 @media (min-width: 1024px) {
     .nav-mobile {
-        display: none; 
-    }
-    .extend-div{
         display: none;
     }
+
+    .extend-div {
+        display: none;
+    }
+
     /* .footer{
         display: none;
     } */
@@ -25,7 +27,7 @@
 
 
 
-.nav-container-mobile{
+.nav-container-mobile {
     width: 100%;
     height: 100%;
     display: flex;
@@ -36,26 +38,27 @@
 .section-divider {
     display: flex;
     justify-content: space-between;
-    width: 100%; 
-    align-items: center; 
+    width: 100%;
+    align-items: center;
 }
 
 .icon-container-mobile {
-    width: 80%; 
+    width: 80%;
     height: 100%;
     display: flex;
     padding: 1px;
-    align-items: center; 
+    align-items: center;
 }
 
-.filter-container-mobile, 
+.filter-container-mobile,
 .search-container-mobile {
     display: flex;
     justify-content: end;
     align-items: end;
-    width: 10%; 
+    width: 10%;
 }
-.search-input-container-mobile{
+
+.search-input-container-mobile {
     width: 100%;
     display: flex;
 }
@@ -65,7 +68,8 @@
     right: 0;
     /* background-color: red; */
 }
-.search-icon-mobile{
+
+.search-icon-mobile {
     width: 14px;
     height: 14px;
     position: absolute;
@@ -78,7 +82,7 @@
 }
 
 
-.extend-div-filter{
+.extend-div-filter {
     display: none;
     border: 1px solid rgb(57, 223, 132);
     border-radius: 4px;
@@ -86,13 +90,14 @@
     padding: 10px;
 
 }
-button{
+
+button {
     background: transparent;
     border: none;
-    cursor:pointer;
+    cursor: pointer;
 }
 
-.extend-div-search{
+.extend-div-search {
     display: none;
     border: 1px solid rgb(57, 223, 132);
     border-radius: 4px;
@@ -106,23 +111,23 @@ button{
     width: 100%;
     height: 40px;
     background-color: #DFF7E5;
-    position: fixed; 
-    bottom: 0; 
+    position: fixed;
+    bottom: 0;
     left: 0;
     display: inline-flex;
-    align-items: center; 
-    justify-content: center; 
+    align-items: center;
+    justify-content: center;
 }
 
 
 /* hide footer navbar for big screen */
 @media (min-width: 1024px) {
-    .footer{
+    .footer {
         display: none;
     }
 }
 
-.home-container-mobile{
+.home-container-mobile {
     width: 30%;
     height: 100%;
     display: flex;
@@ -130,7 +135,7 @@ button{
     align-items: center;
 }
 
-.wishlist-container-mobile{
+.wishlist-container-mobile {
     width: 30%;
     height: 100%;
     display: flex;
